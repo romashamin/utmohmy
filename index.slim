@@ -2,12 +2,43 @@ doctype html
 html lang="ru"
   head
     meta charset="utf-8"
-    title Компоновщик URL по версии Oh My Stats
+    title Компоновщик URL
     link rel="stylesheet" href="css/stylesheet.css"
 
   body
-    .content
-      header
-        h1 Компоновщик URL по версии Oh My Stats
+    .container
+      h1
+        ' Компоновщик URL
+        small по версии Oh My Stats
+
+      p#result-url
+
+      form
+        fieldset
+          p
+            label for="input-orig-url" Ссылка
+            input#input-orig-url type="url" name="input-orig-url" tabindex="1" placeholder="Адрес вашей целевой страницы" autofocus="autofocus"
+          p
+            label for="input-source" Источник
+            input#input-source type="text" name="input-source" tabindex="2" placeholder="google, yandex или другой"
+          p
+            label for="input-channel" Канал
+            input#input-channel type="text" name="input-channel" tabindex="2" placeholder="cpc, banner" list="channels"
+            datalist#channels
+              option value="cpc"
+              option value="banner"
+              option value="email"
+          p
+            label for="input-targeting" Таргетинг
+            input#input-targeting type="text" name="input-targeting" tabindex="3" placeholder="Таргетинг"
+          p
+            label for="input-category" Категория
+            input#input-category type="text" name="input-category" tabindex="4" placeholder="Категория"
+          p
+            label for="input-subcategory" Подкатегория
+            input#input-subcategory type="text" name="input-subcategory" tabindex="5" placeholder="Подкатегория"
+
+      p
+        button#btn-submit Build!
 
     script src="js/main.js"

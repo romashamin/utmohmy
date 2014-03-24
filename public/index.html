@@ -2,16 +2,45 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <title>Компоновщик URL по версии Oh My Stats</title>
+    <title>Компоновщик URL</title>
     <link href="css/stylesheet.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="content">
-      <header>
-        <h1>
-          Компоновщик URL по версии Oh My Stats
-        </h1>
-      </header>
+    <div class="container">
+      <h1>
+        Компоновщик URL <small>по версии Oh My Stats</small>
+      </h1>
+      <p id="result-url"></p>
+      <form>
+        <fieldset>
+          <p>
+            <label for="input-orig-url">Ссылка</label><input autofocus="autofocus" id="input-orig-url" name="input-orig-url" placeholder="Адрес вашей целевой страницы" tabindex="1" type="url" />
+          </p>
+          <p>
+            <label for="input-source">Источник</label><input id="input-source" name="input-source" placeholder="google, yandex или другой" tabindex="2" type="text" />
+          </p>
+          <p>
+            <label for="input-channel">Канал</label><input id="input-channel" list="channels" name="input-channel" placeholder="cpc, banner" tabindex="2" type="text" />
+            <datalist id="channels">
+              <option value="cpc"></option>
+              <option value="banner"></option>
+              <option value="email"></option>
+            </datalist>
+          </p>
+          <p>
+            <label for="input-targeting">Таргетинг</label><input id="input-targeting" name="input-targeting" placeholder="Таргетинг" tabindex="3" type="text" />
+          </p>
+          <p>
+            <label for="input-category">Категория</label><input id="input-category" name="input-category" placeholder="Категория" tabindex="4" type="text" />
+          </p>
+          <p>
+            <label for="input-subcategory">Подкатегория</label><input id="input-subcategory" name="input-subcategory" placeholder="Подкатегория" tabindex="5" type="text" />
+          </p>
+        </fieldset>
+      </form>
+      <p>
+        <button id="btn-submit">Build!</button>
+      </p>
     </div>
     <script src="js/main.js"></script>
   </body>
