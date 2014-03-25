@@ -1,3 +1,9 @@
 h1 small {
   font-weight: normal;
   font-style: italic; }
+
+.invalid {
+  background: red; }
+
+.highlighted {
+  color: red; }
