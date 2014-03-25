@@ -77,18 +77,3 @@ build_url = ->
 
 
 spaces_to_hyphens = (str) -> str.replace /\s+/g, '-'
-
-
-
-###
-validate_form = ->
-  if validity_of FORM.input_orig_url is false
-    FORM.input_orig_url.classList.add('invalid')
-  else
-    FORM.input_orig_url.classList.remove('invalid')
-
-
-
-validity_of = (input) ->
-  if input.value in [null, ''] then return false else return true
-###
