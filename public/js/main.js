@@ -26,9 +26,9 @@
     FORM.input_orig_url.value = 'ohmystats.com';
     FORM.input_source.value = 'ohmyblog';
     FORM.input_channel.value = 'cpc';
-    FORM.input_targeting.value = 'tar ge ting';
-    FORM.input_category.value = 'cate gory';
-    FORM.input_subcategory.value = 'sub cate gory';
+    FORM.input_targeting.value = 'accoutrements';
+    FORM.input_category.value = 'magnanimous';
+    FORM.input_subcategory.value = 'circumlocution';
     build_url();
     _results = [];
     for (input_name in FORM) {

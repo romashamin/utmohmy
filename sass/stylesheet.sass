@@ -1,6 +1,9 @@
 // Mixins and Variables
 
-$white-yellow: #fffdf5
+$primary-color:       #ff521d
+$primary-color-light: #ffd19a
+$almost-white:        #fffdf5
+
 $easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
 
 @mixin transition($transition-property, $transition-time, $method)
@@ -16,6 +19,16 @@ $easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
   -ms-transition: none
   -o-transition: none
   transition: none
+
+@mixin break_long_words()
+  word-wrap:      break-word
+  -ms-word-break: break-all
+  word-break:     break-all
+  word-break:     break-word
+  -webkit-hyphens:  auto
+  -moz-hyphens:     auto
+  hyphens:          auto
+
 
 // Custom Font
 
@@ -45,6 +58,8 @@ body, input, h1, h2, h3, h4, h5
   padding: 0
 
 
+// Header Styles
+
 .header
   height: 150px
   vertical-align: center
@@ -64,19 +79,43 @@ body, input, h1, h2, h3, h4, h5
   top: 46px
   left: 40px
   opacity: 0.3
-  @include transition(opacity, 2s, $easing-type)
+  +transition(opacity, 2s, $easing-type)
 
   &:hover
     opacity: 1
 
   &:active
-    @include transition_off
-    background-color: $white-yellow
+    +transition_off
+    background-color: $almost-white
     //opacity: 0.8
 
 
+// Result URL Styles
+
+#result-url
+  display: block
+  margin-left: 20px
+  margin-right: 20px
+  padding-top: 34px
+  padding-bottom: 34px
+  font-family: "Geometria", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: 200
+  font-size: 30px
+  letter-spacing: -1px
+  line-height: 42px
+  +break_long_words
+  overflow-x: scroll
+  border-top: 1px solid $primary-color-light
+  border-bottom: 1px solid $primary-color-light
+
 .invalid
-  background: red
+  background: $primary-color-light
 
 .highlighted
-  color: red
+  color: $primary-color
+
+
+// Form Styles
+
+.control-form
+  margin-top: 30px

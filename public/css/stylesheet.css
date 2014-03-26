@@ -48,8 +48,33 @@ body, input, h1, h2, h3, h4, h5 {
     transition: none;
     background-color: #fffdf5; }
 
+#result-url {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  font-family: "Geometria", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 42px;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  overflow-x: scroll;
+  border-top: 1px solid #ffd19a;
+  border-bottom: 1px solid #ffd19a; }
+
 .invalid {
-  background: red; }
+  background: #ffd19a; }
 
 .highlighted {
-  color: red; }
+  color: #ff521d; }
+
+.control-form {
+  margin-top: 30px; }
