@@ -1,3 +1,23 @@
+// Mixins and Variables
+
+$white-yellow: #fffdf5
+$easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
+
+@mixin transition($transition-property, $transition-time, $method)
+  -webkit-transition: $transition-property $transition-time $method
+  -moz-transition: $transition-property $transition-time $method
+  -ms-transition: $transition-property $transition-time $method
+  -o-transition: $transition-property $transition-time $method
+  transition: $transition-property $transition-time $method
+
+@mixin transition_off()
+  -webkit-transition: none
+  -moz-transition: none
+  -ms-transition: none
+  -o-transition: none
+  transition: none
+
+// Custom Font
 
 @font-face
   font-family: "Geometria"
@@ -17,8 +37,43 @@
   font-size: 18px
 
 
+// Common Styles
+
 body, input, h1, h2, h3, h4, h5
   +basic-typography
+  margin: 0
+  padding: 0
+
+
+.header
+  height: 150px
+  vertical-align: center
+
+  h1
+    margin-top: 12px
+    text-align: center
+
+.logo-box
+  display: block
+  text-indent: -9999px
+  width: 58px
+  height: 55px
+  background: url(../images/logo-oms.svg)
+  background-size: 58px 55px
+  position: relative
+  top: 46px
+  left: 40px
+  opacity: 0.3
+  @include transition(opacity, 2s, $easing-type)
+
+  &:hover
+    opacity: 1
+
+  &:active
+    @include transition_off
+    background-color: $white-yellow
+    //opacity: 0.8
+
 
 .invalid
   background: red
