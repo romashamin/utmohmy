@@ -78,6 +78,9 @@ body, input, h1, h2, h3, h4, h5 {
   user-select: none;
   cursor: default; }
 
+body {
+  min-width: 640px; }
+
 .header {
   height: 150px;
   vertical-align: center; }
