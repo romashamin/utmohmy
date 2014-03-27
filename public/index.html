@@ -20,6 +20,16 @@
     <link href="css/stylesheet.css" rel="stylesheet" />
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="container fade_opacity">
       <header class="header">
         <a class="logo-box slide_top" href="https://ohmystats.com?utm_source=utmohmy&amp;utm_medium=special&amp;utm_campaign=logo-link"></a>
@@ -59,6 +69,17 @@
           </p>
         </fieldset>
       </form>
+    </div>
+    <div class="social">
+      <div class="fb">
+        <div class="fb-share-button" data-href="https://ohmystats.com/utm" data-type="button_count" data-width="120"></div>
+      </div>
+      <div class="twitter">
+        <a class="twitter-share-button" data-lang="ru" data-via="ohmystats" href="https://twitter.com/share">Твитнуть</a>
+        <script type="text/javascript">
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>

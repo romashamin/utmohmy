@@ -25,6 +25,17 @@ html lang="ru"
     link rel="stylesheet" href="css/stylesheet.css"
 
   body
+    // Including JavaScript SDK
+    #fb-root
+    javascript:
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
     .container.fade_opacity
       header.header
         a.logo-box.slide_top href="https://ohmystats.com?utm_source=utmohmy&utm_medium=special&utm_campaign=logo-link"
@@ -60,5 +71,16 @@ html lang="ru"
           p
             label for="input-subcategory" Подкатегория
             input#input-subcategory type="text" name="input-subcategory" tabindex="6" placeholder="Подкатегория"
+
+    .social
+      // FB Plugin
+      .fb
+        .fb-share-button data-href="https://ohmystats.com/utm" data-width="120" data-type="button_count"
+
+      // Twitter Plugin
+      .twitter
+        a href="https://twitter.com/share" class="twitter-share-button" data-via="ohmystats" data-lang="ru" Твитнуть
+        javascript:
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
     script src="js/main.js"

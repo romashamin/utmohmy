@@ -233,3 +233,22 @@ body {
     color: #fffdf5; }
   .invalid:active, .invalid:focus {
     background: #ff521d; }
+
+.social {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px; }
+  .social:before, .social:after {
+    content: " ";
+    display: table; }
+  .social:after {
+    clear: both; }
+
+.twitter {
+  width: 120px;
+  float: left; }
+
+.fb {
+  width: 120px;
+  float: right; }
