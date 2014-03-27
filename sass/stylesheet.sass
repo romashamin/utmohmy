@@ -4,23 +4,27 @@ $primary-color:       #ff521d
 $primary-color-light: #ffd19a
 $almost-white:        #fffdf5
 
-$easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
+$def-easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
 
-@mixin transition($transition-property, $transition-time, $method)
+=no_margin_no_padding
+  margin:   0
+  padding:  0
+
+=transition($transition-property, $transition-time, $method)
   -webkit-transition: $transition-property $transition-time $method
   -moz-transition: $transition-property $transition-time $method
   -ms-transition: $transition-property $transition-time $method
   -o-transition: $transition-property $transition-time $method
   transition: $transition-property $transition-time $method
 
-@mixin transition_off()
+=transition_off
   -webkit-transition: none
   -moz-transition: none
   -ms-transition: none
   -o-transition: none
   transition: none
 
-@mixin break_long_words()
+=break_long_words
   word-wrap:      break-word
   -ms-word-break: break-all
   word-break:     break-all
@@ -44,18 +48,38 @@ $easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
   font-weight: 300
   font-style: normal
 
-@mixin basic-typography
+=basic-typography
   font-family: "Geometria", "Helvetica Neue", Helvetica, Arial, sans-serif
   font-weight: 300
   font-size: 18px
 
 
+// UX Hacks
+
+=text-select($on_off: none)
+  -webkit-user-select:  $on_off
+  -moz-user-select:     $on_off
+  -ms-user-select:      $on_off
+  -o-user-select:       $on_off
+  user-select:          $on_off
+  @if $on_off == none
+    cursor: default
+  @else
+    cursor: auto
+
+::-moz-selection
+  background-color: $primary-color-light
+
+::selection
+  background-color: $primary-color-light
+
+
 // Common Styles
 
 body, input, h1, h2, h3, h4, h5
+  +no_margin_no_padding
   +basic-typography
-  margin: 0
-  padding: 0
+  +text-select(none)
 
 
 // Header Styles
@@ -79,7 +103,7 @@ body, input, h1, h2, h3, h4, h5
   top: 46px
   left: 40px
   opacity: 0.3
-  +transition(opacity, 2s, $easing-type)
+  +transition(opacity, 2s, $def-easing-type)
 
   &:hover
     opacity: 1
@@ -104,18 +128,61 @@ body, input, h1, h2, h3, h4, h5
   letter-spacing: -1px
   line-height: 42px
   +break_long_words
-  overflow-x: scroll
-  border-top: 1px solid $primary-color-light
-  border-bottom: 1px solid $primary-color-light
+  border-top:     1px solid $primary-color-light
+  border-bottom:  1px solid $primary-color-light
+  +text-select(text)
 
 .invalid
+  +transition(all, 1s, $def-easing-type)
   background: $primary-color-light
 
 .highlighted
+  +transition(all, 1s, $def-easing-type)
   color: $primary-color
 
 
 // Form Styles
 
 .control-form
-  margin-top: 30px
+  margin-top:     60px
+  margin-bottom:  60px
+  width: 448px
+  margin-left:  auto
+  margin-right: auto
+
+  fieldset
+    +no_margin_no_padding
+    border: none
+
+  p
+    +no_margin_no_padding
+
+    &:active,
+    &:focus
+
+  label
+    display: inline-block
+    width: 140px
+
+  input[type=text]
+    position: relative
+    width: 280px
+    margin-bottom: -1px
+    padding: 15px 10px 13px
+    border: none
+    border-left:  none
+    border-right: none
+    border-top:     1px solid $primary-color-light
+    border-bottom:  1px solid $primary-color-light
+    +text-select(text)
+    z-index: 1
+
+    &:active,
+    &:focus
+      +transition(all, 1s, $def-easing-type)
+      outline: none !important
+      box-shadow: none
+      color:                $primary-color
+      border-top-color:     $primary-color
+      border-bottom-color:  $primary-color
+      z-index: 2
