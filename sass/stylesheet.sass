@@ -134,10 +134,6 @@ body, input, h1, h2, h3, h4, h5
   border-bottom:  1px solid $primary-color-light
   +text-select(text)
 
-.invalid
-  +transition(all, 1s, $def-easing-type)
-  background: $primary-color-light
-
 .highlighted
   +transition(all, 1s, $def-easing-type)
   color: $primary-color
@@ -185,3 +181,20 @@ body, input, h1, h2, h3, h4, h5
       border-top-color:     $primary-color
       border-bottom-color:  $primary-color
       z-index: 2
+
+.invalid
+  +transition(all, 1s, $def-easing-type)
+  background: $primary-color-light
+
+  &::-webkit-input-placeholder
+    color: $almost-white
+  &:-moz-placeholder
+    color: $almost-white
+  &::-moz-placeholder
+    color: $almost-white
+  &:-ms-input-placeholder
+    color: $almost-white
+
+  &:active,
+  &:focus
+    background: $primary-color

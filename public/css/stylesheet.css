@@ -89,14 +89,6 @@ body, input, h1, h2, h3, h4, h5 {
   user-select: text;
   cursor: auto; }
 
-.invalid {
-  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -ms-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  background: #ffd19a; }
-
 .highlighted {
   -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -150,3 +142,21 @@ body, input, h1, h2, h3, h4, h5 {
       border-top-color: #ff521d;
       border-bottom-color: #ff521d;
       z-index: 2; }
+
+.invalid {
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -ms-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: #ffd19a; }
+  .invalid::-webkit-input-placeholder {
+    color: #fffdf5; }
+  .invalid:-moz-placeholder {
+    color: #fffdf5; }
+  .invalid::-moz-placeholder {
+    color: #fffdf5; }
+  .invalid:-ms-input-placeholder {
+    color: #fffdf5; }
+  .invalid:active, .invalid:focus {
+    background: #ff521d; }
