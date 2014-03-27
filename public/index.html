@@ -17,18 +17,21 @@
       <form class="control-form">
         <fieldset>
           <p>
-            <label for="input-orig-url">Ссылка</label><input id="input-orig-url" name="input-orig-url" placeholder="Адрес вашей целевой страницы" tabindex="1" type="text" />
+            <label for="input-orig-url">Ссылка</label><input id="input-orig-url" name="input-orig-url" placeholder="Адрес целевой страницы" tabindex="1" type="text" />
           </p>
           <p>
-            <label for="input-source">Источник</label><input id="input-source" name="input-source" placeholder="google, yandex или другой" tabindex="2" type="text" />
+            <label for="input-source">Источник</label><input id="input-source" name="input-source" placeholder="google, yandex" tabindex="2" type="text" />
           </p>
           <p>
-            <label for="input-channel">Канал</label><input id="input-channel" list="channels" name="input-channel" placeholder="cpc, banner" tabindex="3" type="text" />
+            <label for="input-channel">Канал</label><input id="input-channel" list="channels" name="input-channel" placeholder="cpc, display" tabindex="3" type="text" />
             <datalist id="channels">
               <option value="cpc"></option>
-              <option value="banner"></option>
-              <option value="email"></option>
-              <option value="teaser"></option>
+              <option value="display"></option>
+              <option value="price"></option>
+              <option value="retargeting"></option>
+              <option value="affiliate"></option>
+              <option value="social_cpc"></option>
+              <option value="special"></option>
             </datalist>
           </p>
           <p>

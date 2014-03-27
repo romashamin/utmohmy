@@ -17,18 +17,21 @@ html lang="ru"
         fieldset
           p
             label for="input-orig-url" Ссылка
-            input#input-orig-url type="text" name="input-orig-url" tabindex="1" placeholder="Адрес вашей целевой страницы"
+            input#input-orig-url type="text" name="input-orig-url" tabindex="1" placeholder="Адрес целевой страницы"
           p
             label for="input-source" Источник
-            input#input-source type="text" name="input-source" tabindex="2" placeholder="google, yandex или другой"
+            input#input-source type="text" name="input-source" tabindex="2" placeholder="google, yandex"
           p
             label for="input-channel" Канал
-            input#input-channel type="text" name="input-channel" tabindex="3" placeholder="cpc, banner" list="channels"
+            input#input-channel type="text" name="input-channel" tabindex="3" placeholder="cpc, display" list="channels"
             datalist#channels
               option value="cpc"
-              option value="banner"
-              option value="email"
-              option value="teaser"
+              option value="display"
+              option value="price"
+              option value="retargeting"
+              option value="affiliate"
+              option value="social_cpc"
+              option value="special"
           p
             label for="input-targeting" Таргетинг
             input#input-targeting type="text" name="input-targeting" tabindex="4" placeholder="Таргетинг"
