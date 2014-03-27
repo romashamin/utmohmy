@@ -25,10 +25,13 @@ $def-easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
   transition:         none
 
 =break_long_words
-  word-wrap:      break-word
   -ms-word-break: break-all
   word-break:     break-all
+  word-wrap:      break-word
   word-break:     break-word
+
+  white-space: pre
+
   -webkit-hyphens:  auto
   -moz-hyphens:     auto
   hyphens:          auto
@@ -72,6 +75,10 @@ $def-easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
 
 ::selection
   background-color: $primary-color-light
+
+// Firefox-specific hack
+body:not(:-moz-handler-blocked) #result-url
+  white-space: pre-wrap
 
 
 // Common Styles
@@ -128,7 +135,6 @@ body, input, h1, h2, h3, h4, h5
   font-size: 30px
   letter-spacing: -1px
   line-height: 42px
-  white-space: pre
   +break_long_words
   border-top:     1px solid $primary-color-light
   border-bottom:  1px solid $primary-color-light
