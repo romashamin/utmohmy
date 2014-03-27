@@ -1,3 +1,51 @@
+@-webkit-keyframes move-the-object {
+  0% {
+    top: -400px; }
+
+  100% {
+    top: 46px; } }
+@-moz-keyframes move-the-object {
+  0% {
+    top: -400px; }
+
+  100% {
+    top: 46px; } }
+@-o-keyframes move-the-object {
+  0% {
+    top: -400px; }
+
+  100% {
+    top: 46px; } }
+@keyframes move-the-object {
+  0% {
+    top: -400px; }
+
+  100% {
+    top: 46px; } }
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0.1; }
+
+  100% {
+    opacity: 1; } }
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0.1; }
+
+  100% {
+    opacity: 1; } }
+@-o-keyframes opacity {
+  0% {
+    opacity: 0.1; }
+
+  100% {
+    opacity: 1; } }
+@keyframes opacity {
+  0% {
+    opacity: 0.1; }
+
+  100% {
+    opacity: 1; } }
 @font-face {
   font-family: "Geometria";
   src: url("../fonts/gextralight.woff") format("woff");
@@ -62,6 +110,25 @@ body, input, h1, h2, h3, h4, h5 {
     -o-transition: none;
     transition: none;
     background-color: #fffdf5; }
+
+.slide_top {
+  position: relative;
+  -webkit-animation: move-the-object .8s 1;
+  -moz-animation: move-the-object .8s 1;
+  -o-animation: move-the-object .8s 1;
+  animation: move-the-object .8s 1;
+  animation-timing-function: cubic-bezier(0, 1.355, 0.81, 1);
+  -webkit-animation-timing-function: cubic-bezier(0, 1.355, 0.81, 1);
+  -moz-animation-timing-function: cubic-bezier(0, 1.355, 0.81, 1); }
+
+.fade_opacity {
+  -webkit-animation: opacity .4s 1;
+  -moz-animation: opacity .4s 1;
+  -o-animation: opacity .4s 1;
+  animation: opacity .4s 1;
+  animation-timing-function: ease-in;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in; }
 
 #result-url {
   display: block;

@@ -5,10 +5,13 @@ $primary-color-light: #ffd19a
 $almost-white:        #fffdf5
 
 $def-easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
+$bounce-easing:   cubic-bezier(0.000, 1.355, 0.810, 1.000)
+
 
 =no_margin_no_padding
   margin:   0
   padding:  0
+
 
 =transition($transition-property, $transition-time, $method)
   -webkit-transition: $transition-property $transition-time $method
@@ -23,6 +26,48 @@ $def-easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
   -ms-transition:     none
   -o-transition:      none
   transition:         none
+
+
+=animation($animate...)
+  $max: length($animate)
+  $animations: ''
+
+  @for $i from 1 through $max
+    $animations: #{$animations + nth($animate, $i)}
+    @if $i < $max
+      $animations: #{$animations + ", "}
+
+  -webkit-animation:  $animations
+  -moz-animation:     $animations
+  -o-animation:       $animations
+  animation:          $animations
+
+=keyframes($animationName)
+  @-webkit-keyframes #{$animationName}
+    @content
+  @-moz-keyframes #{$animationName}
+    @content
+  @-o-keyframes #{$animationName}
+    @content
+  @keyframes #{$animationName}
+    @content
+
++keyframes(move-the-object)
+  0%
+    top: -400px
+  100%
+    top: 46px
+
++keyframes(opacity)
+  0%
+    opacity: .1
+  100%
+    opacity: 1
+
+=animation_timing($timing_func)
+  animation-timing-function:          $timing_func
+  -webkit-animation-timing-function:  $timing_func
+  -moz-animation-timing-function:     $timing_func
 
 =break_long_words
   -ms-word-break: break-all
@@ -118,7 +163,15 @@ body, input, h1, h2, h3, h4, h5
   &:active
     +transition_off
     background-color: $almost-white
-    //opacity: 0.8
+
+.slide_top
+  position: relative
+  +animation('move-the-object .8s 1')
+  +animation_timing($bounce-easing)
+
+.fade_opacity
+  +animation('opacity .4s 1')
+  +animation_timing(ease-in)
 
 
 // Result URL Styles
