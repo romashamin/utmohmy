@@ -177,10 +177,11 @@ body, input, h1, h2, h3, h4, h5
     border-bottom:  1px solid $primary-color-light
     +text-select(text)
     z-index: 1
+    +transition(color, 1.4s, $def-easing-type)
+    +transition(background, 1.4s, $def-easing-type)
 
     &:active,
     &:focus
-      +transition(all, 1s, $def-easing-type)
       outline: none !important
       box-shadow: none
       color:                $primary-color
@@ -189,7 +190,6 @@ body, input, h1, h2, h3, h4, h5
       z-index: 2
 
 .invalid
-  +transition(all, 1s, $def-easing-type)
   background: $primary-color-light
 
   &::-webkit-input-placeholder

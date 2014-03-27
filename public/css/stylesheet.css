@@ -132,13 +132,18 @@ body, input, h1, h2, h3, h4, h5 {
     -o-user-select: text;
     user-select: text;
     cursor: auto;
-    z-index: 1; }
+    z-index: 1;
+    -webkit-transition: color 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: color 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: color 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: color 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: background 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: background 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: background 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: background 1.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: background 1.4s cubic-bezier(0.075, 0.82, 0.165, 1); }
     .control-form input[type=text]:active, .control-form input[type=text]:focus {
-      -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      -ms-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
       outline: none !important;
       box-shadow: none;
       color: #ff521d;
@@ -147,11 +152,6 @@ body, input, h1, h2, h3, h4, h5 {
       z-index: 2; }
 
 .invalid {
-  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -ms-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   background: #ffd19a; }
   .invalid::-webkit-input-placeholder {
     color: #fffdf5; }
