@@ -21,12 +21,12 @@ RESULT_URL = document.querySelector('#result-url')
 window.onload = ->
 
   # Set Defaults
-  FORM.input_orig_url.value    = 'ohmystats.com'
+  FORM.input_orig_url.value    = 'https://ohmystats.com'
   FORM.input_source.value      = 'ohmyblog'
-  FORM.input_channel.value     = 'cpc'
-  FORM.input_targeting.value   = 'accoutrements'
-  FORM.input_category.value    = 'magnanimous'
-  FORM.input_subcategory.value = 'circumlocution'
+  FORM.input_channel.value     = 'blog'
+  FORM.input_targeting.value   = '00'
+  FORM.input_category.value    = 'marketing'
+  FORM.input_subcategory.value = 'utm-tags'
 
   build_url()
 
