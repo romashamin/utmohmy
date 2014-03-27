@@ -12,17 +12,17 @@ $def-easing-type: cubic-bezier(0.075, 0.82, 0.165, 1)
 
 =transition($transition-property, $transition-time, $method)
   -webkit-transition: $transition-property $transition-time $method
-  -moz-transition: $transition-property $transition-time $method
-  -ms-transition: $transition-property $transition-time $method
-  -o-transition: $transition-property $transition-time $method
-  transition: $transition-property $transition-time $method
+  -moz-transition:    $transition-property $transition-time $method
+  -ms-transition:     $transition-property $transition-time $method
+  -o-transition:      $transition-property $transition-time $method
+  transition:         $transition-property $transition-time $method
 
 =transition_off
   -webkit-transition: none
-  -moz-transition: none
-  -ms-transition: none
-  -o-transition: none
-  transition: none
+  -moz-transition:    none
+  -ms-transition:     none
+  -o-transition:      none
+  transition:         none
 
 =break_long_words
   word-wrap:      break-word
@@ -95,12 +95,12 @@ body, input, h1, h2, h3, h4, h5
 .logo-box
   display: block
   text-indent: -9999px
-  width: 58px
+  width:  58px
   height: 55px
   background: url(../images/logo-oms.svg)
   background-size: 58px 55px
   position: relative
-  top: 46px
+  top:  46px
   left: 40px
   opacity: 0.3
   +transition(opacity, 2s, $def-easing-type)
@@ -118,15 +118,17 @@ body, input, h1, h2, h3, h4, h5
 
 #result-url
   display: block
-  margin-left: 20px
-  margin-right: 20px
-  padding-top: 34px
+  position: relative
+  margin-left:    20px
+  margin-right:   20px
+  padding-top:    34px
   padding-bottom: 34px
   font-family: "Geometria", "Helvetica Neue", Helvetica, Arial, sans-serif
   font-weight: 200
   font-size: 30px
   letter-spacing: -1px
   line-height: 42px
+  white-space: pre
   +break_long_words
   border-top:     1px solid $primary-color-light
   border-bottom:  1px solid $primary-color-light
@@ -144,11 +146,11 @@ body, input, h1, h2, h3, h4, h5
 // Form Styles
 
 .control-form
+  width: 448px
   margin-top:     60px
   margin-bottom:  60px
-  width: 448px
-  margin-left:  auto
-  margin-right: auto
+  margin-left:    auto
+  margin-right:   auto
 
   fieldset
     +no_margin_no_padding
@@ -156,9 +158,6 @@ body, input, h1, h2, h3, h4, h5
 
   p
     +no_margin_no_padding
-
-    &:active,
-    &:focus
 
   label
     display: inline-block

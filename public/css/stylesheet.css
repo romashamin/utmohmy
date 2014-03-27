@@ -62,6 +62,7 @@ body, input, h1, h2, h3, h4, h5 {
 
 #result-url {
   display: block;
+  position: relative;
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 34px;
@@ -71,6 +72,7 @@ body, input, h1, h2, h3, h4, h5 {
   font-size: 30px;
   letter-spacing: -1px;
   line-height: 42px;
+  white-space: pre;
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-all;
@@ -104,9 +106,9 @@ body, input, h1, h2, h3, h4, h5 {
   color: #ff521d; }
 
 .control-form {
+  width: 448px;
   margin-top: 60px;
   margin-bottom: 60px;
-  width: 448px;
   margin-left: auto;
   margin-right: auto; }
   .control-form fieldset {
