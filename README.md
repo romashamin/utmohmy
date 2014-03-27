@@ -1,5 +1,6 @@
-# Компоновщик URL
+# Компоновщик ссылок с utm-метками от Oh My Stats
 
-Помогает собрать адрес с UTM-метками
+Составляет правильную ссылку из utm-меток, таргетинга и подкатегорий пока вы заполняете форму. Заменяет пробелы на дефис.
 
-Пост в блоге Oh My Stats про UTM-метки: http://romanshamin.ru/oms/grid/
+Про utm-метки: как и зачем размечать рекламу в интернете
+http://blog.ohmystats.com/pro-utm-tegi-kak-zachem-razmechat-reklamu-v-internete/
