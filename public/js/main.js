@@ -22,7 +22,7 @@
   RESULT_URL = document.querySelector('#result-url');
 
   window.onload = function() {
-    var input, input_name, _results;
+    var input, input_name;
     FORM.input_orig_url.value = 'https://ohmystats.com';
     FORM.input_source.value = 'ohmyblog';
     FORM.input_channel.value = 'blog';
@@ -30,7 +30,6 @@
     FORM.input_category.value = 'marketing';
     FORM.input_subcategory.value = 'utm-tags';
     build_url();
-    _results = [];
     for (input_name in FORM) {
       input = FORM[input_name];
       input.addEventListener('input', function() {
@@ -48,14 +47,26 @@
         document.querySelector(span_id).classList.add('highlighted');
         return this.focused = true;
       }, false);
-      _results.push(input.addEventListener('blur', function() {
+      input.addEventListener('blur', function() {
         var span_id;
         span_id = "#" + (this.id.replace(/input-/, 'span-'));
         document.querySelector(span_id).classList.remove('highlighted');
         return this.focused = false;
-      }, false));
+      }, false);
     }
-    return _results;
+    return RESULT_URL.addEventListener('click', function() {
+      var range;
+      if (document.selection) {
+        range = document.body.createTextRange();
+        console.log("@id: " + this.id);
+        range.moveToElementText(document.getElementById(this.id));
+        return range.select();
+      } else if (window.getSelection) {
+        range = document.createRange();
+        range.selectNode(document.getElementById(this.id));
+        return window.getSelection().addRange(range);
+      }
+    }, false);
   };
 
   build_url = function() {
