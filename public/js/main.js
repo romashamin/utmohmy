@@ -1,5 +1,5 @@
 (function() {
-  var FORM, RESULT_URL, SPANS, build_url, spaces_to_hyphens;
+  var FORM, RESULT_URL, SPANS, SUBCAT_, build_url, spaces_to_hyphens;
 
   FORM = {
     input_orig_url: document.querySelector('#input-orig-url'),
@@ -21,6 +21,8 @@
 
   RESULT_URL = document.querySelector('#result-url');
 
+  SUBCAT_ = '_';
+
   window.onload = function() {
     var input, input_name;
     FORM.input_orig_url.value = 'https://ohmystats.com';
@@ -35,9 +37,17 @@
       input.addEventListener('input', function() {
         var _ref;
         if ((_ref = this.value) === null || _ref === '') {
-          this.classList.add('invalid');
+          if (this.id !== 'input-subcategory') {
+            this.classList.add('invalid');
+          } else {
+            SUBCAT_ = '';
+          }
         } else {
-          this.classList.remove('invalid');
+          if (this.id !== 'input-subcategory') {
+            this.classList.remove('invalid');
+          } else {
+            SUBCAT_ = '_';
+          }
         }
         return build_url();
       });
@@ -86,7 +96,7 @@
         classes[input_name] = '';
       }
     }
-    return RESULT_URL.innerHTML = "<span id=" + SPANS.input_orig_url + " class=" + classes.input_orig_url + ">" + (spaces_to_hyphens(FORM.input_orig_url.value)) + "</span>?utm_source=<span id=" + SPANS.input_source + " class=" + classes.input_source + ">" + (spaces_to_hyphens(FORM.input_source.value)) + "</span>&utm_medium=<span id=" + SPANS.input_channel + " class=" + classes.input_channel + ">" + (spaces_to_hyphens(FORM.input_channel.value)) + "</span>&utm_campaign=<span id=" + SPANS.input_targeting + " class=" + classes.input_targeting + ">" + (spaces_to_hyphens(FORM.input_targeting.value)) + "</span>_<span id=" + SPANS.input_category + " class=" + classes.input_category + ">" + (spaces_to_hyphens(FORM.input_category.value)) + "</span>_<span id=" + SPANS.input_subcategory + " class=" + classes.input_subcategory + ">" + (spaces_to_hyphens(FORM.input_subcategory.value)) + "</span>";
+    return RESULT_URL.innerHTML = "<span id=" + SPANS.input_orig_url + " class=" + classes.input_orig_url + ">" + (spaces_to_hyphens(FORM.input_orig_url.value)) + "</span>?utm_source=<span id=" + SPANS.input_source + " class=" + classes.input_source + ">" + (spaces_to_hyphens(FORM.input_source.value)) + "</span>&utm_medium=<span id=" + SPANS.input_channel + " class=" + classes.input_channel + ">" + (spaces_to_hyphens(FORM.input_channel.value)) + "</span>&utm_campaign=<span id=" + SPANS.input_targeting + " class=" + classes.input_targeting + ">" + (spaces_to_hyphens(FORM.input_targeting.value)) + "</span>_<span id=" + SPANS.input_category + " class=" + classes.input_category + ">" + (spaces_to_hyphens(FORM.input_category.value)) + "</span>" + SUBCAT_ + "<span id=" + SPANS.input_subcategory + " class=" + classes.input_subcategory + ">" + (spaces_to_hyphens(FORM.input_subcategory.value)) + "</span>";
   };
 
   spaces_to_hyphens = function(str) {

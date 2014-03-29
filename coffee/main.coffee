@@ -16,6 +16,8 @@ SPANS =
 
 RESULT_URL = document.querySelector('#result-url')
 
+SUBCAT_ = '_'
+
 
 
 window.onload = ->
@@ -35,9 +37,15 @@ window.onload = ->
 
     input.addEventListener('input', () ->
       if @value in [null, '']
-        @classList.add('invalid')
+        if @id isnt 'input-subcategory'
+          @classList.add('invalid')
+        else
+          SUBCAT_ = ''
       else
-        @classList.remove('invalid')
+        if @id isnt 'input-subcategory'
+          @classList.remove('invalid')
+        else
+          SUBCAT_ = '_'
 
       build_url()
     )
@@ -83,7 +91,7 @@ build_url = ->
     else
       classes[input_name] = ''
 
-  RESULT_URL.innerHTML = "<span id=#{SPANS.input_orig_url} class=#{classes.input_orig_url}>#{spaces_to_hyphens(FORM.input_orig_url.value)}</span>?utm_source=<span id=#{SPANS.input_source} class=#{classes.input_source}>#{spaces_to_hyphens(FORM.input_source.value)}</span>&utm_medium=<span id=#{SPANS.input_channel} class=#{classes.input_channel}>#{spaces_to_hyphens(FORM.input_channel.value)}</span>&utm_campaign=<span id=#{SPANS.input_targeting} class=#{classes.input_targeting}>#{spaces_to_hyphens(FORM.input_targeting.value)}</span>_<span id=#{SPANS.input_category} class=#{classes.input_category}>#{spaces_to_hyphens(FORM.input_category.value)}</span>_<span id=#{SPANS.input_subcategory} class=#{classes.input_subcategory}>#{spaces_to_hyphens(FORM.input_subcategory.value)}</span>"
+  RESULT_URL.innerHTML = "<span id=#{SPANS.input_orig_url} class=#{classes.input_orig_url}>#{spaces_to_hyphens(FORM.input_orig_url.value)}</span>?utm_source=<span id=#{SPANS.input_source} class=#{classes.input_source}>#{spaces_to_hyphens(FORM.input_source.value)}</span>&utm_medium=<span id=#{SPANS.input_channel} class=#{classes.input_channel}>#{spaces_to_hyphens(FORM.input_channel.value)}</span>&utm_campaign=<span id=#{SPANS.input_targeting} class=#{classes.input_targeting}>#{spaces_to_hyphens(FORM.input_targeting.value)}</span>_<span id=#{SPANS.input_category} class=#{classes.input_category}>#{spaces_to_hyphens(FORM.input_category.value)}</span>#{SUBCAT_}<span id=#{SPANS.input_subcategory} class=#{classes.input_subcategory}>#{spaces_to_hyphens(FORM.input_subcategory.value)}</span>"
 
 
 
