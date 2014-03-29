@@ -133,6 +133,34 @@ body {
   -webkit-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in; }
 
+.tooltip {
+  position: relative;
+  cursor: pointer; }
+  .tooltip:before {
+    display: block;
+    position: absolute;
+    width: 400px;
+    left: 50%;
+    bottom: 134px;
+    margin-left: -200px;
+    content: attr(data-title);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: normal;
+    color: #ffd19a;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease-in;
+    -moz-transition: opacity 0.4s ease-in;
+    -ms-transition: opacity 0.4s ease-in;
+    -o-transition: opacity 0.4s ease-in;
+    transition: opacity 0.4s ease-in; }
+  .tooltip:hover:before {
+    visibility: visible;
+    opacity: 1; }
+
 #result-url {
   display: block;
   position: relative;

@@ -57,7 +57,6 @@ window.onload = ->
   RESULT_URL.addEventListener('click', () ->
     if document.selection
       range = document.body.createTextRange()
-      console.log("@id: #{@id}")
       range.moveToElementText(document.getElementById(@id))
       range.select()
     else if window.getSelection

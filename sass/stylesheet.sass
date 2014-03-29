@@ -175,6 +175,32 @@ body
   +animation('opacity .4s 1')
   +animation_timing(ease-in)
 
+.tooltip
+  position: relative
+  cursor: pointer
+
+  &:before
+    display: block
+    position: absolute
+    width: 400px
+    left: 50%
+    bottom: 134px
+    margin-left: -200px
+    content: attr(data-title)
+    font-weight: 300
+    font-size: 13px
+    line-height: 15px
+    letter-spacing: normal
+    color: $primary-color-light
+    text-align: center
+    visibility: hidden
+    opacity: 0
+    +transition(opacity, .4s, ease-in)
+
+  &:hover:before
+    visibility: visible
+    opacity: 1
+
 
 // Result URL Styles
 

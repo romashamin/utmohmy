@@ -58,7 +58,6 @@
       var range;
       if (document.selection) {
         range = document.body.createTextRange();
-        console.log("@id: " + this.id);
         range.moveToElementText(document.getElementById(this.id));
         return range.select();
       } else if (window.getSelection) {
