@@ -37,15 +37,13 @@
       input.addEventListener('input', function() {
         var _ref;
         if ((_ref = this.value) === null || _ref === '') {
-          if (this.id !== 'input-subcategory') {
-            this.classList.add('invalid');
-          } else {
+          this.classList.add('invalid');
+          if (this.id === 'input-subcategory') {
             SUBCAT_ = '';
           }
         } else {
-          if (this.id !== 'input-subcategory') {
-            this.classList.remove('invalid');
-          } else {
+          this.classList.remove('invalid');
+          if (this.id === 'input-subcategory') {
             SUBCAT_ = '_';
           }
         }

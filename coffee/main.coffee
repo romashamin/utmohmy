@@ -37,15 +37,11 @@ window.onload = ->
 
     input.addEventListener('input', () ->
       if @value in [null, '']
-        if @id isnt 'input-subcategory'
-          @classList.add('invalid')
-        else
-          SUBCAT_ = ''
+        @classList.add('invalid')
+        SUBCAT_ = '' if @id is 'input-subcategory'
       else
-        if @id isnt 'input-subcategory'
-          @classList.remove('invalid')
-        else
-          SUBCAT_ = '_'
+        @classList.remove('invalid')
+        SUBCAT_ = '_' if @id is 'input-subcategory'
 
       build_url()
     )
