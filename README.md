@@ -7,6 +7,6 @@
 * Экранирует кириллицу
 * Приводит к нижнему регистру
 
-<img align="center" width="382" src="http://ohmystats.com/utm/images/ohmystats-utm-tags.jpg">
+<img align="right" width="382" src="http://ohmystats.com/utm/images/ohmystats-utm-tags.jpg">
 
 P. S. Пост про utm-метки в блоге Oh My Stats: http://blog.ohmystats.com/pro-utm-tegi-kak-zachem-razmechat-reklamu-v-internete/
