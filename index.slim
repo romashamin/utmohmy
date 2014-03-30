@@ -41,17 +41,6 @@ html lang="ru"
       })();
 
   body
-    // Including JavaScript SDK
-    #fb-root
-    javascript:
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
     .container.fade_opacity
       header.header
         a.logo-box.slide_top href="https://ohmystats.com?utm_source=utmohmy&utm_medium=special&utm_campaign=logo-link"
@@ -118,3 +107,14 @@ html lang="ru"
           },{type: "round", text: "Share"}));
 
     script src="js/main.js"
+
+    // Including JavaScript SDK
+    #fb-root
+    javascript:
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
