@@ -141,7 +141,8 @@ body {
     position: absolute;
     width: 400px;
     left: 50%;
-    bottom: 134px;
+    bottom: 100%;
+    margin-bottom: -20px;
     margin-left: -200px;
     content: attr(data-title);
     font-weight: 300;
