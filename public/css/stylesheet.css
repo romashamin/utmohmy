@@ -264,6 +264,9 @@ body {
     background: #ff521d;
     color: #fffdf5 !important; }
 
+.adv {
+  margin-bottom: 60px; }
+
 .social {
   width: 300px;
   margin-left: auto;
