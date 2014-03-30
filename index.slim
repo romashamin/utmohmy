@@ -62,12 +62,13 @@ html lang="ru"
             input#input-orig-url type="text" name="input-orig-url" tabindex="1" placeholder="Адрес целевой страницы"
           p
             label for="input-source" Источник
-            input#input-source type="text" name="input-source" tabindex="2" placeholder="google, yandex"
+            input#input-source type="text" name="input-source" tabindex="2" placeholder="yandex, google, admitad"
           p
             label for="input-channel" Канал
-            input#input-channel type="text" name="input-channel" tabindex="3" placeholder="cpc, display" list="channels"
+            input#input-channel type="text" name="input-channel" tabindex="3" placeholder="cpc, banner, email" list="channels"
             datalist#channels
               option value="cpc"
+              option value="banner"
               option value="display"
               option value="price"
               option value="retargeting"
@@ -76,13 +77,13 @@ html lang="ru"
               option value="special"
           p
             label for="input-targeting" Таргетинг
-            input#input-targeting type="text" name="input-targeting" tabindex="4" placeholder="Таргетинг"
+            input#input-targeting type="text" name="input-targeting" tabindex="4" placeholder="01 — Москва, 02 — Питер"
           p
             label for="input-category" Категория
-            input#input-category type="text" name="input-category" tabindex="5" placeholder="Категория"
+            input#input-category type="text" name="input-category" tabindex="5" placeholder="food, electronics, clothing"
           p
             label for="input-subcategory" Подкатегория
-            input#input-subcategory type="text" name="input-subcategory" tabindex="6" placeholder="Подкатегория (необязательна)"
+            input#input-subcategory type="text" name="input-subcategory" tabindex="6" placeholder="sushi, photo-video, jeans"
 
     .social
       // FB Plugin

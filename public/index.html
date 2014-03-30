@@ -55,12 +55,13 @@
             <label for="input-orig-url">Ссылка</label><input id="input-orig-url" name="input-orig-url" placeholder="Адрес целевой страницы" tabindex="1" type="text" />
           </p>
           <p>
-            <label for="input-source">Источник</label><input id="input-source" name="input-source" placeholder="google, yandex" tabindex="2" type="text" />
+            <label for="input-source">Источник</label><input id="input-source" name="input-source" placeholder="yandex, google, admitad" tabindex="2" type="text" />
           </p>
           <p>
-            <label for="input-channel">Канал</label><input id="input-channel" list="channels" name="input-channel" placeholder="cpc, display" tabindex="3" type="text" />
+            <label for="input-channel">Канал</label><input id="input-channel" list="channels" name="input-channel" placeholder="cpc, banner, email" tabindex="3" type="text" />
             <datalist id="channels">
               <option value="cpc"></option>
+              <option value="banner"></option>
               <option value="display"></option>
               <option value="price"></option>
               <option value="retargeting"></option>
@@ -70,13 +71,13 @@
             </datalist>
           </p>
           <p>
-            <label for="input-targeting">Таргетинг</label><input id="input-targeting" name="input-targeting" placeholder="Таргетинг" tabindex="4" type="text" />
+            <label for="input-targeting">Таргетинг</label><input id="input-targeting" name="input-targeting" placeholder="01 — Москва, 02 — Питер" tabindex="4" type="text" />
           </p>
           <p>
-            <label for="input-category">Категория</label><input id="input-category" name="input-category" placeholder="Категория" tabindex="5" type="text" />
+            <label for="input-category">Категория</label><input id="input-category" name="input-category" placeholder="food, electronics, clothing" tabindex="5" type="text" />
           </p>
           <p>
-            <label for="input-subcategory">Подкатегория</label><input id="input-subcategory" name="input-subcategory" placeholder="Подкатегория (необязательна)" tabindex="6" type="text" />
+            <label for="input-subcategory">Подкатегория</label><input id="input-subcategory" name="input-subcategory" placeholder="sushi, photo-video, jeans" tabindex="6" type="text" />
           </p>
         </fieldset>
       </form>
