@@ -1,6 +1,12 @@
 # Компоновщик ссылок с utm-метками от Oh My Stats
 
-Составляет правильную ссылку из utm-меток, таргетинга и подкатегорий пока вы заполняете форму. Заменяет пробелы на дефис.
+Составляет правильную ссылку из utm-меток, таргетинга, категории и подкатегории пока вы заполняете форму.
 
-Про utm-метки: как и зачем размечать рекламу в интернете
-http://blog.ohmystats.com/pro-utm-tegi-kak-zachem-razmechat-reklamu-v-internete/
+Уберегает от ошибок:
+* Заменяет пробелы на дефис
+* Экранирует кириллицу
+* Приводит к нижнему регистру
+
+<img align="center" width="382" src="http://ohmystats.com/utm/images/ohmystats-utm-tags.jpg">
+
+P. S. Пост про utm-метки в блоге Oh My Stats: http://blog.ohmystats.com/pro-utm-tegi-kak-zachem-razmechat-reklamu-v-internete/
