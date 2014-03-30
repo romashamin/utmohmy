@@ -25,6 +25,9 @@ html lang="ru"
     link rel="stylesheet" href="css/stylesheet.css"
     link rel="stylesheet" href="adv/bw-marketing/stylesheet.css"
 
+    // VK Share Button
+    script type="text/javascript" src="http://vk.com/js/api/share.js?90" charset="windows-1251"
+
     // GA Tracking Code
     javascript:
       var _gaq = _gaq || [];
@@ -104,5 +107,14 @@ html lang="ru"
         a href="https://twitter.com/share" class="twitter-share-button" data-via="ohmystats" data-lang="ru" Твитнуть
         javascript:
           !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+      // VK Plugin
+      .vk
+        javascript:
+          document.write(VK.Share.button({
+            title: 'Компоновщик ссылок с utm-метками от Oh My Stats',
+            description: 'Составляет правильную ссылку из utm-меток, таргетинга и подкатегорий пока вы заполняете форму. Заменяет пробелы на дефис. Прост, удобен и красив.',
+            image: 'https://ohmystats.com/utm/images/ohmystats-utm-tags.jpg'
+          },{type: "round", text: "Share"}));
 
     script src="js/main.js"
