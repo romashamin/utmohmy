@@ -79,7 +79,7 @@
   };
 
   build_url = function() {
-    var classes, input, input_name;
+    var classes, input, input_name, part_category, part_channel, part_orig_url, part_source, part_subcategory, part_targeting;
     classes = {
       input_orig_url: '',
       input_source: '',
@@ -96,7 +96,13 @@
         classes[input_name] = '';
       }
     }
-    return RESULT_URL.innerHTML = "<span id=" + SPANS.input_orig_url + " class=" + classes.input_orig_url + ">" + (spaces_to_hyphens(FORM.input_orig_url.value)) + "</span>?utm_source=<span id=" + SPANS.input_source + " class=" + classes.input_source + ">" + (spaces_to_hyphens(FORM.input_source.value)) + "</span>&utm_medium=<span id=" + SPANS.input_channel + " class=" + classes.input_channel + ">" + (spaces_to_hyphens(FORM.input_channel.value)) + "</span>&utm_campaign=<span id=" + SPANS.input_targeting + " class=" + classes.input_targeting + ">" + (spaces_to_hyphens(FORM.input_targeting.value)) + "</span>_<span id=" + SPANS.input_category + " class=" + classes.input_category + ">" + (spaces_to_hyphens(FORM.input_category.value)) + "</span>" + SUBCAT_ + "<span id=" + SPANS.input_subcategory + " class=" + classes.input_subcategory + ">" + (spaces_to_hyphens(FORM.input_subcategory.value)) + "</span>";
+    part_orig_url = "<span id=" + SPANS.input_orig_url + " class=" + classes.input_orig_url + ">" + (encodeURI(spaces_to_hyphens(FORM.input_orig_url.value))) + "</span>";
+    part_source = "<span id=" + SPANS.input_source + " class=" + classes.input_source + ">" + (encodeURIComponent(spaces_to_hyphens(FORM.input_source.value))) + "</span>";
+    part_channel = "<span id=" + SPANS.input_channel + " class=" + classes.input_channel + ">" + (encodeURIComponent(spaces_to_hyphens(FORM.input_channel.value))) + "</span>";
+    part_targeting = "<span id=" + SPANS.input_targeting + " class=" + classes.input_targeting + ">" + (encodeURIComponent(spaces_to_hyphens(FORM.input_targeting.value))) + "</span>";
+    part_category = "<span id=" + SPANS.input_category + " class=" + classes.input_category + ">" + (encodeURIComponent(spaces_to_hyphens(FORM.input_category.value))) + "</span>";
+    part_subcategory = "<span id=" + SPANS.input_subcategory + " class=" + classes.input_subcategory + ">" + (encodeURIComponent(spaces_to_hyphens(FORM.input_subcategory.value))) + "</span>";
+    return RESULT_URL.innerHTML = "" + part_orig_url + "?utm_source=" + part_source + "&utm_medium=" + part_channel + "&utm_campaign=" + part_targeting + "_" + part_category + SUBCAT_ + part_subcategory;
   };
 
   spaces_to_hyphens = function(str) {
