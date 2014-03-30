@@ -261,7 +261,8 @@ body {
   .invalid:-ms-input-placeholder {
     color: #fffdf5; }
   .invalid:active, .invalid:focus {
-    background: #ff521d; }
+    background: #ff521d;
+    color: #fffdf5 !important; }
 
 .social {
   width: 300px;
