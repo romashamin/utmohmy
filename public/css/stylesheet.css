@@ -220,6 +220,8 @@ body {
     width: 280px;
     margin-bottom: -1px;
     padding: 15px 10px 13px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
     border: none;
     border-left: none;
     border-right: none;

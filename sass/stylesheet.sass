@@ -12,6 +12,9 @@ $bounce-easing:   cubic-bezier(0.000, 1.355, 0.810, 1.000)
   margin:   0
   padding:  0
 
+=webkit_styles_off
+  -webkit-appearance:     none
+  -webkit-border-radius:  0px
 
 =transition($transition-property, $transition-time, $method)
   -webkit-transition: $transition-property $transition-time $method
@@ -252,6 +255,7 @@ body
     width: 280px
     margin-bottom: -1px
     padding: 15px 10px 13px
+    +webkit_styles_off
     border: none
     border-left:  none
     border-right: none
