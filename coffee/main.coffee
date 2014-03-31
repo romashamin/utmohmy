@@ -23,7 +23,7 @@ SUBCAT_ = '_'
 window.onload = ->
 
   # Set Defaults
-  FORM.input_orig_url.value    = 'https://ohmystats.com'
+  FORM.input_orig_url.value    = 'http://ohmystats.com'
   FORM.input_source.value      = 'ohmyblog'
   FORM.input_channel.value     = 'blog'
   FORM.input_targeting.value   = '00'
