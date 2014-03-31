@@ -9,4 +9,4 @@
 * Экранирует кириллицу
 * Приводит к нижнему регистру
 
-P. S. Пост про utm-метки в блоге Oh My Stats: http://blog.ohmystats.com/pro-utm-tegi-kak-zachem-razmechat-reklamu-v-internete/
+P. S. Пост про utm-метки в блоге Oh My Stats: http://http://blog.ohmystats.com/utm-metki-kak-zachem-razmechat-reklamu-v-internete/
